@@ -55,7 +55,7 @@ namespace GameState {
 
         public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
             if (_gameState == null) {
-                Debug.LogError(string.Format("Game State not found for state {0}", _gameStateType));
+                Debug.LogError($"Game State not found for state {_gameStateType}");
                 return;
             }
             

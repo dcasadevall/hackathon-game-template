@@ -28,19 +28,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: GameOver
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: RestartButtonPressed
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameStateType:
-    _classRef: LifecycleStates.GameInProgressState, Assembly-CSharp
+    _classRef: GameInProgress.GameInProgressState, Assembly-CSharp
 --- !u!114 &114489186045649202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameStateType:
-    _classRef: LifecycleStates.SplashScreenState, Assembly-CSharp
+    _classRef: SplashScreen.SplashScreenState, Assembly-CSharp
 --- !u!114 &114701111441116992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameStateType:
-    _classRef: LifecycleStates.GameOverState, Assembly-CSharp
+    _classRef: GameOverScreen.GameOverScreenState, Assembly-CSharp
 --- !u!1101 &114841440218068983
 AnimatorStateTransition:
   m_ObjectHideFlags: 3

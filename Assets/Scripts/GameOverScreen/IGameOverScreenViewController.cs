@@ -1,10 +1,10 @@
 using UniRx.Async;
 
-namespace SplashScreen {
+namespace GameOverScreen {
     /// <summary>
-    /// Implementors of this interface will be responsible for showing / hiding a splash screen.
+    /// Implementors of this interface will be responsible for showing / hiding a gameOver screen.
     /// </summary>
-    public interface ISplashScreenViewController {
+    public interface IGameOverScreenViewController {
         /// <summary>
         /// Shows the view controller and completes the asynchronous task once it is dismissed.
         /// </summary>

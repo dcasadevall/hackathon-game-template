@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8759190363603567924}
   - component: {fileID: 2567286141879339908}
-  - component: {fileID: 3416543608664872806}
+  - component: {fileID: 1958949558677364578}
   m_Layer: 5
-  m_Name: SplashScreen 1
+  m_Name: GameOverScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &3416543608664872806
+--- !u!114 &1958949558677364578
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,10 +68,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1123650749570456798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b0071aab7b4f471ea38d6058f4a2dfd, type: 3}
+  m_Script: {fileID: 11500000, guid: 43c99d2d892154cdaa98dd2edb099f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startButton: {fileID: 8991589519878104327}
+  _restartButton: {fileID: 8991589519878104327}
 --- !u!1 &1708516927492991457
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 7788472682571574719}
   - component: {fileID: 8991589519878104327}
   m_Layer: 5
-  m_Name: StartButton
+  m_Name: RestartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,7 +323,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SPLASH SCREEN
+  m_Text: Game Over
 --- !u!1 &7886579593316948984
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,4 +400,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start Game
+  m_Text: Restart

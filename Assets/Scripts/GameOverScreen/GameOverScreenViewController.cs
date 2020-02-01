@@ -1,28 +1,27 @@
-﻿using System.Threading.Tasks;
-using UniRx.Async;
+﻿using UniRx.Async;
 using UnityEngine;
 using UnityEngine.UI;
 using Utils;
 
-namespace SplashScreen {
+namespace GameOverScreen {
 	/// <summary>
-	/// MonoBehaviour implementation of <see cref="ISplashScreenViewController"/>.
+	/// MonoBehaviour implementation of <see cref="IGameOverScreenViewController"/>.
 	/// </summary>
-	internal class SplashScreenViewController : MonoBehaviour, ISplashScreenViewController {
+	internal class GameOverScreenViewController : MonoBehaviour, IGameOverScreenViewController {
 #pragma warning disable 649
 		[SerializeField]
-		private Button _startButton;
+		private Button _restartButton;
 #pragma warning restore 649
 
     // Hide on awake since the Monobehaviour is instantiated when injected.
     private void Awake() {
-	    Preconditions.CheckNotNull(_startButton);
+	    Preconditions.CheckNotNull(_restartButton);
 	    gameObject.SetActive(false);
     }
 
 		public async UniTask Show() {
 			gameObject.SetActive(true);
-			await _startButton.OnClickAsync();
+			await _restartButton.OnClickAsync();
 			gameObject.SetActive(false);
 		}
 	}

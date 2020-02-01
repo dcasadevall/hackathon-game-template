@@ -6,9 +6,15 @@ namespace GameState.Installers {
 #pragma warning disable 649
         [SerializeField]
         private GameObject _gameStateController;
+        
+        [SerializeField]
+        private GameStateSettings _gameStateSettings;
 #pragma warning restore 649
         
         public override void InstallBindings() {
+            // Settings
+            Container.Bind<GameStateSettings>().FromInstance(_gameStateSettings).AsSingle();
+            
             // We use "WithId" here so we can inject a specific animator to the interested parties.
             Container.Bind<Animator>().WithId("GameStateController").FromComponentInNewPrefab(_gameStateController).AsSingle();
             Container.Bind<IInitializable>().To<GameStateControllerInitializer>().AsSingle();

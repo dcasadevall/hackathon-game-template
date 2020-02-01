@@ -1,11 +1,11 @@
 using System;
 using UnityEngine;
 
-namespace LifecycleStates {
+namespace GameState {
     [Serializable]
-    public class LifecycleStateSettings {
+    public class GameStateSettings {
         [SerializeField]
-        private string _splashScreenScene = "SplashScreenScene";
+        private string _splashScreenScene = "SplashScreen";
         public string SplashScreenScene {
             get {
                 return _splashScreenScene;
@@ -21,7 +21,7 @@ namespace LifecycleStates {
         }
 
         [SerializeField]
-        private string _gameOverScene = "GameOverScene";
+        private string _gameOverScene = "GameOverScreen";
         public string GameOverScene {
             get {
                 return _gameOverScene;
