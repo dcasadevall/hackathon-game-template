@@ -70,6 +70,11 @@ namespace GameState {
 
         private void HandleTransitionTriggered(TransitionType transitionType) {
             _gameState.TransitionTriggered -= HandleTransitionTriggered;
+            // This may be true if we are closing the game, which cancels all async processes.
+            if (_animator == null) {
+                return;
+            }
+            
             _animator.SetBool(transitionType.ToString(), true);
         }
 
