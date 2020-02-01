@@ -1,6 +1,8 @@
 using System.Linq;
+using LogSystem;
 using UnityEngine;
 using Zenject;
+using ILogger = LogSystem.ILogger;
 
 namespace Audio {
   /// <summary>
@@ -13,22 +15,25 @@ namespace Audio {
     private readonly AudioSource _musicSource;
     private readonly IFXClip[] _fxClips;
     private readonly IMusicClip[] _musicClips;
+    private readonly ILogger _logger;
 
     public AudioPlayer(
       FXBehaviour.Factory fxFactory,
       [Inject(Id = AudioInstaller.kMusicSourceId)]
       AudioSource musicSource,
-      IFXClip[] fxClips, IMusicClip[] musicClips) {
+      IFXClip[] fxClips, IMusicClip[] musicClips, 
+      ILogger logger) {
       _fxFactory = fxFactory;
       _musicSource = musicSource;
       _fxClips = fxClips;
       _musicClips = musicClips;
+      _logger = logger;
     }
     
     public void PlayMusic(MusicType musicType) {
       IMusicClip musicClip = _musicClips.FirstOrDefault(x => x.MusicType == musicType);
       if (musicClip == null) {
-        Debug.LogFormat($"Music Clip not found: {musicType}");
+        _logger.LogError(LoggedFeature.Audio, $"Music Clip not found: {musicType}");
         return;
       }
       
@@ -43,7 +48,7 @@ namespace Audio {
     public void PlaySoundEffect(FXType fxType) {
       IFXClip fxClip = _fxClips.FirstOrDefault(x => x.FxType == fxType);
       if (fxClip == null) {
-        Debug.LogError(string.Format("FX Clip not found: {0}", fxType));
+        _logger.LogError(LoggedFeature.Audio, $"FX Clip not found: {fxType}");
         return;
       }
       

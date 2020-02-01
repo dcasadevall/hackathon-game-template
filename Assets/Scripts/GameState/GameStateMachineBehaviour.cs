@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using GameState.Installers;
+using LogSystem;
 using UnityEngine;
 using Util.ClassTypeReference;
 using Zenject;
+using ILogger = LogSystem.ILogger;
 
 namespace GameState {
     /// <summary>
@@ -20,10 +22,12 @@ namespace GameState {
         private IGameState _gameState;
         private Animator _animator;
         private IGameStateContainerRegistry _gameStateContainerRegistry;
+        private ILogger _logger;
 
         [Inject]
-        public void Construct(IGameStateContainerRegistry gameStateContainerRegistry) {
+        public void Construct(IGameStateContainerRegistry gameStateContainerRegistry, ILogger logger) {
             _gameStateContainerRegistry = gameStateContainerRegistry;
+            _logger = logger;
         }
 
         public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
@@ -55,10 +59,11 @@ namespace GameState {
 
         public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
             if (_gameState == null) {
-                Debug.LogError($"Game State not found for state {_gameStateType}");
+                _logger.LogError(LoggedFeature.GameState, $"Game State not found for state {_gameStateType}");
                 return;
             }
             
+            Debug.Log($"Exiting State: {_gameStateType}");
             _gameState.HandleStateExit();
             _gameState = null;
         }
