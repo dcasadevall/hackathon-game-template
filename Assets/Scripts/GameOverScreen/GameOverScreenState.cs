@@ -30,7 +30,7 @@ namespace GameOverScreen {
 
             await _gameOverScreenViewController.Show().SuppressCancellationThrow();
 
-            TransitionTriggered?.Invoke(TransitionType.GameOver);
+            TransitionTriggered?.Invoke(TransitionType.RestartButtonPressed);
         }
 
         public void HandleStateUpdate() { }

@@ -60,6 +60,7 @@ namespace GameState {
             }
             
             _gameState.HandleStateExit();
+            _gameState = null;
         }
 
         private void HandleTransitionTriggered(TransitionType transitionType) {

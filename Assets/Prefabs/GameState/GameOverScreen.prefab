@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8759190363603567924}
   - component: {fileID: 2567286141879339908}
   - component: {fileID: 1958949558677364578}
+  - component: {fileID: 8400501371304230041}
   m_Layer: 5
   m_Name: GameOverScreen
   m_TagString: Untagged
@@ -72,6 +73,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _restartButton: {fileID: 8991589519878104327}
+--- !u!114 &8400501371304230041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123650749570456798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &1708516927492991457
 GameObject:
   m_ObjectHideFlags: 0

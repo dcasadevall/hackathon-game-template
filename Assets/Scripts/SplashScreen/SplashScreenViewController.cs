@@ -14,10 +14,8 @@ namespace SplashScreen {
 		private Button _startButton;
 #pragma warning restore 649
 
-    // Hide on awake since the Monobehaviour is instantiated when injected.
     private void Awake() {
 	    Preconditions.CheckNotNull(_startButton);
-	    gameObject.SetActive(false);
     }
 
 		public async UniTask Show() {

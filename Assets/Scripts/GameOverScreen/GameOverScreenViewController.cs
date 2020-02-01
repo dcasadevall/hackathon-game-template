@@ -16,7 +16,6 @@ namespace GameOverScreen {
     // Hide on awake since the Monobehaviour is instantiated when injected.
     private void Awake() {
 	    Preconditions.CheckNotNull(_restartButton);
-	    gameObject.SetActive(false);
     }
 
 		public async UniTask Show() {

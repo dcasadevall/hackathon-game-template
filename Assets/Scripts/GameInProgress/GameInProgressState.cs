@@ -1,4 +1,5 @@
 ﻿using GameState;
+using UnityEngine;
 using Zenject;
 
 namespace GameInProgress {
@@ -8,8 +9,7 @@ namespace GameInProgress {
     /// you will most likely not have a "game in progress" state, and instead have smaller substates for the
     /// actual game state.
     ///
-    /// For testing purposes, simply trigger the "GameOver" property in the animator in order to transition out
-    /// of this state.
+    /// For testing purposes, the update loop listens to the space key to trigger a game over transition.
     /// </summary>
     public class GameInProgressState : IGameState {
         public event StateTransitionDelegate TransitionTriggered;
@@ -26,6 +26,9 @@ namespace GameInProgress {
         }
 
         public void HandleStateUpdate() {
+            if (Input.GetKeyUp(KeyCode.Space)) {
+                TransitionTriggered?.Invoke(TransitionType.GameOver);
+            }
         }
 
         public void HandleStateExit() {
