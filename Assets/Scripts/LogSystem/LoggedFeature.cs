@@ -16,6 +16,7 @@ namespace LogSystem {
         public static LoggedFeature UI => new LoggedFeature("UI");
         public static LoggedFeature Audio => new LoggedFeature("Audio");
         public static LoggedFeature GameState => new LoggedFeature("GameState");
+        public static LoggedFeature Network => new LoggedFeature("Network");
         
         private static readonly HashSet<LoggedFeature> _features = new HashSet<LoggedFeature>();
         public static IEnumerable<LoggedFeature> LoggedFeatures => _features;
