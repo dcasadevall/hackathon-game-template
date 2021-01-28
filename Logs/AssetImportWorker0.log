@@ -94,3 +94,65 @@ System memory in use after: 128.1 MB.
 Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2050.
 Total: 2.765102 ms (FindLiveObjects: 0.320092 ms CreateObjectMapping: 0.073515 ms MarkObjects: 2.325405 ms  DeleteObjects: 0.044727 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006547 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.402 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1773 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.4 MB.
+System memory in use after: 135.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2217.
+Total: 2.240711 ms (FindLiveObjects: 0.483269 ms CreateObjectMapping: 0.150441 ms MarkObjects: 1.538356 ms  DeleteObjects: 0.067601 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset
+  artifactKey: Guid(bb955a5d66f044aa980059edb156b5a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset using Guid(bb955a5d66f044aa980059edb156b5a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a59c840d51efdfdd34584e9672a68da6') in 0.360001 seconds
+  Import took 0.365391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010031 seconds.
+  path: Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset
+  artifactKey: Guid(bb955a5d66f044aa980059edb156b5a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset using Guid(bb955a5d66f044aa980059edb156b5a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a59c840d51efdfdd34584e9672a68da6') in 0.007738 seconds
+  Import took 0.013846 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 673.715604 seconds.
+  path: Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset
+  artifactKey: Guid(bb955a5d66f044aa980059edb156b5a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset using Guid(bb955a5d66f044aa980059edb156b5a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b383f273226819242f7f76c9a4be16f') in 0.013105 seconds
+  Import took 0.018747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 230.661199 seconds.
+  path: Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset
+  artifactKey: Guid(bb955a5d66f044aa980059edb156b5a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset using Guid(bb955a5d66f044aa980059edb156b5a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfe1916457e7dae5f7568b7221cfcc06') in 0.011532 seconds
+  Import took 0.017345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015390 seconds.
+  path: Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset
+  artifactKey: Guid(bb955a5d66f044aa980059edb156b5a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset using Guid(bb955a5d66f044aa980059edb156b5a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfe1916457e7dae5f7568b7221cfcc06') in 0.007211 seconds
+  Import took 0.012759 seconds .
+
